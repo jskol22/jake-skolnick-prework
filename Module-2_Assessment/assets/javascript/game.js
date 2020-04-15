@@ -13,6 +13,7 @@ let animalGame = {
     games_won: 0,
     current_animal: "",
     current_guess: "",
+    previous_animal: "",
 
     randomWord: function () {
         this.current_animal = this.words[Math.floor(Math.random() * this.words.length)];
@@ -37,8 +38,41 @@ let animalGame = {
     changeWord: function (letters) {
         this.current_guess == this.current_animal.split('').map(letters = (this.letters_guessed.indexOf(letters) >= 0 ? letters : "_")).join('');
         currentAnimal.innerHTML = this.current_guess;
+    },
+
+    updateAnimal: function () {
+        if(this.games_won > 1) {
+            document.querySelector(this.previous_animal).classList.add("invisible");
+        }
+        document.querySelector(this.current_animal).classList.remove("invisible");
+        this.previous_animal - this.current_animal;
+    },
+    guessCount: function (guess) {
+        if (this.current_animal.indexOf(guess) == -1) {
+            this.guesses_left--;
+            guessesLeft.innerHTML = this.guesses_left;
+        }
+    },
+
+    showGuesses: function (guess) {
+        if (this.letters_guessed.includes(guess) == false) {
+            this.letters_guessed.push(guess);
+            lettersGuessed.innerHTML = this.letters_guessed.join();
+        }
+    },
+
+    answerCorrect: function () {
+        if (this.current_guess == this.current_animal) {
+            this.updateAnimal();
+            this.games_won++;
+            this.correct_answer.push(this.current_animal);
+            wins.innerHTML = `${this.games_won}`;
+            
+        }
     }
 }
+    animalGame.showWord()
+
 
 
 
