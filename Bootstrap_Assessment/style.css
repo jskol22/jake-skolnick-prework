@@ -1,0 +1,42 @@
+.container {
+    /* margin: 0; */
+    /* line-height: 1.5; */
+    text-transform: uppercase;
+    background-color: #79b9c6;
+    height: 750px;
+  }
+
+  .jumbotron {
+      background-color: #79b9c6;
+  }
+  nav {
+    margin-bottom: 80px;
+    text-align: left; 
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+  }
+  p {
+      /* text-align: center; */
+      /* margin-top: 200px; */
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+  }
+  h1 {
+      /* text-align: center; */
+      /* margin-top: 20px; */
+      /* margin-bottom: 30px; */
+      font-size: 90px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      color: white;
+  }
+  h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    border: solid;
+    /* display: inline; */
+    padding: 10px;
+  }
