@@ -32,6 +32,11 @@ let animalGame = {
             this.blanks = blanks + "_";
         }
         currentAnimal.innerText = this.blanks;
+    },
+
+    changeWord: function (letters) {
+        this.current_guess == this.current_animal.split('').map(letters = (this.letters_guessed.indexOf(letters) >= 0 ? letters : "_")).join('');
+        currentAnimal.innerHTML = this.current_guess;
     }
 }
 
