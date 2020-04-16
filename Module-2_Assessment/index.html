@@ -1,46 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module 2 Assessment</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
 </head>
+
 <body>
+    <div class="container text-center">
+        <h1>The Animal Guessing Game!</h1>
+        <h3>Press any key to get started!</h3>
+        <div class=" row animalBox">
+            <h4 class="col-8 animal invisible TIGER">Previous Word: TIGER</h4>
+            <h4 class="col-8 animal invisible ELEPHANT">Previous Word: ELEPHANT</h4>
+            <h4 class="col-8 animal invisible RHINOCEROS">Previous Word: RHINOCEROS</h4>
+            <h4 class="col-8 animal invisible ALLIGATOR">Previous Word: ALLIGATOR</h4>
+            <h4 class="col-8 animal invisible GIRAFFE">Previous Word: GIRAFFE</h4>
+            <h4 class="col-8 animal invisible PELICAN">Previous Word: PELICAN</h4>
+            <h4 class="col-8 animal invisible CHIMPANZEE">Previous Word: CHIMPANZEE</h4>
+            <h4 class="col-8 animal invisible OSTRICH">Previous Word: OSTRICH</h4>
+            <h4 class="col-8 animal invisible ANACONDA">Previous Word: ANACONDA</h4>
+            <h4 class="col-8 animal invisible JAGUAR">Previous Word: JAGUAR</h4>
+            <h4 class="col-8 animal invisible LEMUR">Previous Word: LEMUR</h4>
+            <h4 class="col-8 animal invisible SALAMANDER">Previous Word: SALAMANDER</h4>
+            <h4 class="col-8 animal invisible KANGAROO">Previous Word: KANGAROO</h4>
+            <h4 class="col-8 animal invisible OCTOPUS">Previous Word: OCTOPUS</h4>
+            <h4 class="col-8 animal invisible PENGUIN">Previous Word: PENGUIN</h4>
+            <h4 class="col-8 animal invisible ZEBRA">Previous Word: ZEBRA</h4>
+            <h4 class="col-8 animal invisible HIPPOPOTAMUS">Previous Word: HIPPOPOTAMUS</h4>
+            <h4 class="col-8 animal invisible BUFFALO">Previous Word: BUFFALO</h4>
+            <h4 class="col-8 animal invisible LOBSTER">Previous Word: LOBSTER</h4>
+            <h4 class="col-8 animal invisible PANTHER">Previous Word: PANTHER</h4>
+            <img id="animalPic" src="assets/images/group.jpg" alt="jungle pic" class="col-6 img-fluid">
+        </div>
+        <br>
+        <br>
+        <div class="gameBox">
+            <h2>Wins:<span id="games_won">  0</span></h2>
+            <h3>Current Word</h3>
+            <p id="current_animal"></p>
+            <h3>Number of Guesses Remaining</h3>
+            <h3 id="guesses_left">5</h3>
+            <h3>Letters Already Guessed</h3>
+            <p id="letters_guessed"></p>
+            <h3 id="gameResult"></h3>
+        </div>
 
-    <h1>The Animal Guessing Game!</h1>
-    <h3>Press any key to get started!</h3>
-
-    <h4 class="animal invisible TIGER">Previous Word: <br> TIGER</h4>
-    <h4 class="animal invisible ELEPHANT">Previous Word: <br> ELEPHANT</h4>
-    <h4 class="animal invisible RHINOCEROS">Previous Word: <br> RHINOCEROS</h4>
-    <h4 class="animal invisible ALLIGATOR">Previous Word: <br> ALLIGATOR</h4>
-    <h4 class="animal invisible GIRAFFE">Previous Word: <br> GIRAFFE</h4>
-    <h4 class="animal invisible PELICAN">Previous Word: <br> PELICAN</h4>
-    <h4 class="animal invisible CHIMPANZEE">Previous Word: <br> CHIMPANZEE</h4>
-    <h4 class="animal invisible OSTRICH">Previous Word: <br> OSTRICH</h4>
-    <h4 class="animal invisible ANACONDA">Previous Word: <br> ANACONDA</h4>
-    <h4 class="animal invisible JAGUAR">Previous Word: <br> JAGUAR</h4>
-    <h4 class="animal invisible LEMUR">Previous Word: <br> LEMUR</h4>
-    <h4 class="animal invisible SALAMANDER">Previous Word: <br> SALAMANDER</h4>
-    <h4 class="animal invisible KANGAROO">Previous Word: <br> KANGAROO</h4>
-    <h4 class="animal invisible OCTOPUS">Previous Word: <br> OCTOPUS</h4>
-    <h4 class="animal invisible PENGUIN">Previous Word: <br> PENGUIN</h4>
-    <h4 class="animal invisible ZEBRA">Previous Word: <br> ZEBRA</h4>
-    <h4 class="animal invisible HIPPOPOTAMUS">Previous Word: <br> HIPPOPOTAMUS</h4>
-    <h4 class="animal invisible BUFFALO">Previous Word: <br> BUFFALO</h4>
-    <h4 class="animal invisible LOBSTER">Previous Word: <br> LOBSTER</h4>
-    <h4 class="animal invisible PANTHER">Previous Word: <br> PANTHER</h4>
-
-    <h2>Wins:<span id="games_won"> 0</span></h2>
-    <h3>Current Word</h3>
-    <p id="current_animal"></p>
-    <h3>Number of Guesses Remaining</h3>
-    <h3 id="guesses_left">5</h3>
-    <h3>Letters Already Guessed</h3>
-    <p id="letters_guessed"></p>
-    <h3 id="gameResult"></h3>
+    </div>
 
     <script src="assets/javascript/game.js" charset="utf-8"></script>
 </body>
+
 </html>

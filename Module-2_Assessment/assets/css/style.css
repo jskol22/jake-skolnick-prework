@@ -1,3 +1,30 @@
+body {
+    align-items: center;
+    background: url(../images/jungle.jpg);
+    background-size: cover;
+}
+
+.container {
+    align-content: center;
+    background-color: rgba(255,255,255,0.5);
+    padding-bottom: 20px;
+}
+
 .invisible{
     display: none;
+  }
+
+  .animalBox {
+      width: 500px;
+      height: 200px;
+
+  }
+  .animalBox img {
+      margin-left: 445px;    
+      width: 100%;
+      
+  } 
+  h4 {
+      margin-left: 400px;
+      width: 300px;
   }

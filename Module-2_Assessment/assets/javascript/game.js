@@ -5,6 +5,7 @@ let currentAnimal = document.querySelector("#current_animal");
 let lettersGuessed = document.querySelector("#letters_guessed");
 let guessesLeft = document.querySelector("#guesses_left");
 let result = document.querySelector("#gameResult");
+let audio = new Audio("");
 let animalGame = {
     words: ["TIGER", "ELEPHANT", "RHINOCEROS", "ALLIGATOR", "GIRAFFE", "PELICAN", "CHIMPANZEE", "OSTRICH", "ANACONDA", "JAGUAR", "LEMUR", "SALAMANDER", "KANGAROO", "OCTOPUS", "PENGUIN", "ZEBRA", "HIPPOPOTAMUS", "BUFFALO", "LOBSTER", "PANTHER"],
     blanks: "",
@@ -41,12 +42,18 @@ let animalGame = {
         currentAnimal.innerHTML = this.current_guess;
     },
 
+    tigerSound: function () {
+        audio = new Audio("assets/audio/tiger.mp3");
+        audio.play ();
+    },
     updateAnimal: function () {
         if (this.games_won > 1) {
             document.querySelector("." + this.previous_animal).classList.add("invisible");
         }
         document.querySelector("." + this.current_animal).classList.remove("invisible");
         this.previous_animal = this.current_animal;
+        animalPic.src = `assets/images/${this.current_animal}.jpg`
+        this.tigerSound();
     },
     guessCount: function (guess) {
         if (this.current_animal.indexOf(guess) >= 0) {
